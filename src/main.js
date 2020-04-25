@@ -19,5 +19,7 @@ Vue.use(VueSweetalert2);
 Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
 Vue.use(require('vue-moment'));
-Vue.use(VueScheduler);
+Vue.use(VueScheduler, {
+    availableViews: ['month'],
+});
 new Vue({ el: '#app', router, render: h => h(App) })
