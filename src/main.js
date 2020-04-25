@@ -4,6 +4,7 @@ import App from './App.vue'
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import VueScheduler from 'v-calendar-scheduler';
 import VueSweetalert2 from 'vue-sweetalert2';
+import router from './router'
 
 import 'bootstrap/dist/css/bootstrap.css'
 import 'v-calendar-scheduler/lib/main.css';
@@ -19,6 +20,4 @@ Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
 Vue.use(require('vue-moment'));
 Vue.use(VueScheduler);
-new Vue({
-  render: h => h(App),
-}).$mount('#app')
+new Vue({ el: '#app', router, render: h => h(App) })
