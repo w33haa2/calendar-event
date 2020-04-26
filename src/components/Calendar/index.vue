@@ -124,6 +124,13 @@ export default {
                     'error'
                 )
             }
+            if(this.$moment(this.fromDate).diff(this.$moment(this.toDate)) > 0) {
+                return this.$swal(
+                    'Oh No!',
+                    'End date should be greater than the start date!',
+                    'error'
+                )
+            }
             this.postState = true
             let daysBetween = this.calculateInBetweenDates(this.fromDate, this.toDate)
             if(this.selectedDays.length > 0) {
